@@ -1,0 +1,493 @@
+p,h2 {
+    color:white;
+}
+
+body {
+    margin:0;
+}
+
+.centertext{
+    text-align:center;
+}
+
+div {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    display: flex; /* Устанавливает контейнер .navbar как flex-контейнер, 
+    позволяя его дочерним элементам располагаться в одной линии */
+    flex-direction: row; /* Располагает дочерние элементы .navbar в строку (по горизонтали) */
+    justify-content: space-between; /* Распределяет дочерние элементы .navbar равномерно, 
+    с максимальным пространством между ними */
+    background-color: #47405a; /* Устанавливает фоновый цвет для .navbar */
+}
+
+.logo {
+    max-width: 10%;
+}
+
+.navbar ul {
+    display: flex; /* Устанавливает контейнер ul как flex-контейнер для его дочерних элементов (li) */
+    flex-direction: row; /* Располагает элементы списка (li) в строку (по горизонтали) */
+    list-style: none; /* Убирает маркеры списка */
+    margin: 0; /* Убирает внешний отступ у списка */
+}
+
+.navbar ul li {
+    display: flex; /* Устанавливает каждый элемент списка (li) как flex-контейнер для его содержимого */
+    margin-right: 10px; /* Добавляет отступ справа у каждого элемента списка */
+}
+
+.navbar ul li:hover {
+    background-color: #352f44; /* Изменяет фоновый цвет элемента списка при наведении курсора */
+    border-radius: 20%; /* Скругляет углы элемента списка при наведении курсора */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: white; /* Устанавливает цвет текста ссылок черным */
+    margin: auto; /* Центрирует текст внутри элемента списка */
+}
+
+.navbar div {
+    display: flex; /* Устанавливает div как flex-контейнер */
+    margin-right: 20px; /* Добавляет отступ справа у div */
+}
+
+.navbar div a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок в div */
+    color: white; /* Устанавливает цвет текста ссылок черным */
+    margin: auto; /* Центрирует текст внутри div */
+}
+
+.navbar div:hover {
+    background-color: #352f44; /* Изменяет фоновый цвет div при наведении курсора */
+    border-radius: 20%; /* Скругляет углы div при наведении курсора */
+}
+
+/* Контейнер с элементами, использующий Flexbox для адаптивного размещения */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Элементы переносятся на новую строку при нехватке места */
+}
+
+/* Элементы с классами .person и .interests занимают 25% ширины контейнера и центрируются */
+.person, .interests {
+    width: 25%;
+    margin: auto;
+}
+
+/* Стили для изображений внутри контейнера */
+.container img {
+    border-radius: 10%; /* Скругленные углы изображения */
+    box-shadow: 10px 10px 5px rgba(80, 77, 77, 0.201); /* Добавление тени с серым цветом */
+    width: 30%; /* Ширина изображения составляет 50% от ширины родительского элемента */
+    height: auto; /* Автоматическое подстраивание высоты для сохранения пропорций */
+}
+
+/* Эффект при наведении на изображение */
+.container img:hover {
+    transform: scale(1.05); /* Увеличение изображения на 10% */
+    transition: 0.5s ease; /* Плавный переход за 0.5 секунды */
+    box-shadow: 10px 10px 5px rgba(78, 76, 76, 0.529); /* Изменение цвета тени на синий */
+}
+
+/* Фон для всей страницы */
+body {
+    background-color: #5c5470; /* Светло-серый фон */
+}
+
+/* Фон для основного содержимого страницы */
+main {
+    background: linear-gradient(90deg, #5c5470 0%, #332e3f 0%, #352f44 100%);
+    /* Градиентный фон, плавно переходящий от светлого к более темному оттенку */
+}
+
+/* Стили для текста в параграфах */
+p {
+    text-align: justify; /* Выравнивание текста по ширине */
+    font-size: 1.2rem; /* Увеличенный размер шрифта */
+    font-weight: normal; /* Обычный вес шрифта */
+    margin-right: 20px;
+    margin-left: 10px; /* Отступы по бокам */
+}
+
+/* Эффект при наведении на параграф */
+p:hover {
+    background-color: rgba(78, 76, 76, 0.529); /* Синий фон при наведении */
+}
+
+/* Секции внутри контейнера */
+.container section {
+    width: 100%; /* Секция занимает всю ширину контейнера */
+    margin: auto; /* Центрирование секции */
+}
+
+.container-video {
+    display: flex;
+    flex-direction: column; /* Контейнер для видео, элементы располагаются вертикально */
+}
+
+.video1, .video2, .video3 {
+    margin-bottom: 20px; /* Отступ снизу для каждого видео-блока */
+    flex-direction: column; /* Внутренние элементы располагаются вертикально */
+    display: flex; /* Применение Flexbox для управления содержимым */
+}
+
+.video1 iframe {
+    margin: auto; /* Центрирование видео по горизонтали */
+}
+
+.video2 video {
+    margin: auto; /* Центрирование iframe по горизонтали */
+}
+
+.video3 iframe {
+    margin: auto; /* Центрирование iframe по горизонтали */
+}
+
+.container-audio {
+    display: flex;
+    flex-direction: column; /* Контейнер для аудио, элементы располагаются вертикально */
+}
+
+.audio1, .audio2, .audio3 {
+    display: flex;
+    flex-direction: column; /* Внутренние элементы располагаются вертикально */
+    margin-top: 20px; /* Отступ сверху для каждого аудио-блока */
+}
+
+.audio1 audio, .audio2 audio, .audio3 audio {
+    width: 60%; /* Аудиоплееры занимают 60% ширины контейнера */
+    margin: auto; /* Центрирование аудиоплееров по горизонтали */
+}
+
+.audio1 img, .audio2 img, .audio3 img {
+    margin: auto; /* Центрирование изображений */
+    border-radius: 10%; /* Скругление углов изображений */
+    box-shadow: 5px 5px 5px rgba(80, 77, 77, 0.201); /* Добавление синеватой тени к изображениям */
+}
+
+.container-book {
+    display: flex;
+    flex-direction: column; /* Контейнер для книг, элементы располагаются вертикально */
+}
+
+.book1, .book2, .book3 {
+    display: flex;
+    flex-direction: column; /* Внутренние элементы располагаются вертикально */
+    margin-top: 20px; /* Отступ сверху для каждого книжного блока */
+}
+
+.book1 img, .book2 img, .book3 img {
+    margin: auto; /* Центрирование изображений */
+    border-radius: 10%; /* Скругление углов изображений */
+    box-shadow: 5px 5px 5px rgba(80, 77, 77, 0.201); /* Добавление синеватой тени к изображениям */
+    margin-bottom: 10px; /* Отступ снизу для изображений */
+}
+
+.book1 a, .book2 a, .book3 a {
+    margin: auto; /* Центрирование ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: white; /* Цвет текста ссылок черный */
+    font-size: 1.2rem; /* Увеличенный размер шрифта для ссылок */
+} 
+
+.book1 img:hover, .book2 img:hover, .book3 img:hover {
+    box-shadow: 5px 5px 5px rgba(80, 77, 77, 0.529); /* Изменение тени на зеленовато-желтую при наведении на изображение */
+}
+
+.book1 a:hover, .book2 a:hover, .book3 a:hover {
+    background-color: rgba(78, 76, 76, 0.529); /* Изменение фона ссылки на синий при наведении */
+    transition: 0.7s ease; /* Плавный переход фона за 0.7 секунды */
+}
+
+footer {
+    display: flex;
+    flex-direction: row; /* Элементы внутри футера располагаются горизонтально */
+    justify-content: center; /* Центрирование содержимого футера */
+    background-color:  #47405a;
+}
+
+footer a {
+    margin-right: 10px; /* Отступ справа у ссылок в футере */
+}
+
+.burger {
+    display: none;
+    
+}
+
+
+@media (max-width: 700px) {
+    /* При ширине экрана до 700px */
+    
+    .container {
+        display: flex;
+        flex-direction: column; /* Переключение на вертикальный макет */
+    }
+    
+    .person {
+        display: flex;
+        flex-direction: column; /* Внутренние элементы располагаются вертикально */
+        flex-wrap: wrap; /* Перенос элементов на новую строку при необходимости */
+        width: 100%; /* Элемент занимает всю ширину контейнера */
+        margin: 0; /* Убираем отступы */
+    }
+
+    .person p {
+        margin-top: 5px; /* Отступ сверху для параграфов */
+        margin-bottom: 10px; /* Отступ снизу для параграфов */
+    }
+    
+    .container img {
+        margin-top: 20px; /* Отступ сверху для изображений */
+        border-radius: 10%; /* Скругление углов изображений */
+        box-shadow: 5px 5px 5px gray; /* Тень для изображений */
+        width: 95%; /* Изображение занимает 95% ширины контейнера */
+        height: auto; /* Высота автоматически подстраивается под ширину */
+        margin: auto; /* Центрирование изображения по горизонтали */
+    }
+    
+    .container img:hover {
+        transform: scale(1.03); /* Легкое увеличение изображения при наведении */
+        transition: 0.5s ease; /* Плавный переход увеличения за 0.5 секунды */
+        box-shadow: 5px 5px 5px rgba(78, 76, 76, 0.529); /* Изменение тени при наведении */
+    }
+
+    .interests {
+        display: flex;
+        flex-direction: column; /* Внутренние элементы располагаются вертикально */
+        flex-wrap: wrap; /* Перенос элементов на новую строку при необходимости */
+        width: 100%; /* Элемент занимает всю ширину контейнера */
+        margin: 0; /* Убираем отступы */
+    }
+
+    .interests p {
+        margin-top: 10px; /* Отступ сверху для параграфов */
+        margin-bottom: 0; /* Убираем отступ снизу */
+    }
+
+    h2 {
+        margin: 10px; /* Отступы вокруг заголовка */
+        text-align: center; /* Выравнивание заголовка по центру */
+    }
+
+    .video1 video {
+        margin-top: 20px; /* Отступ сверху для видео */
+        width: 95%; /* Видео занимает 95% ширины контейнера */
+        height: auto; /* Высота автоматически подстраивается под ширину */
+    }
+    
+    .video2 iframe {
+        width: 95%; /* Iframe занимает 95% ширины контейнера */
+        height: 320px; /* Высота Iframe фиксирована */
+    }
+    
+    .video3 iframe {
+        width: 95%; /* Iframe занимает 95% ширины контейнера */
+        height: 320px; /* Высота Iframe фиксирована */
+    }
+
+    .book1 img, .book2 img, .book3 img {
+        width: 95%; /* Изображения книг занимают 95% ширины контейнера */
+        height: auto; /* Высота автоматически подстраивается под ширину */
+    } 
+      
+    /* Основные стили для контейнера с бургер-меню */
+    .burger {
+        display: block; /* Отображение элемента как блочный элемент */
+        position: relative; /* Относительное позиционирование для внутренних элементов */
+        width: 40px; /* Ширина контейнера */
+        height: 40px; /* Высота контейнера */
+        margin: auto; /* Автоматические отступы по бокам для центрирования */
+        margin-left: 20px; /* Отступ слева */
+        margin-right: 5px; /* Отступ справа */
+    }
+    
+    /* Стили для полосок внутри бургер-меню */
+    .burger span {
+        position: absolute; /* Абсолютное позиционирование для расположения полосок внутри контейнера */
+        width: 30px; /* Ширина каждой полоски */
+        left: 5px; /* Отступ от левого края контейнера */
+        height: 3px; /* Высота полоски */
+        background-color: black; /* Цвет полоски */
+        bottom: 20px; /* Расположение полоски от нижнего края контейнера */
+    }
+    
+    /* Стили для первой полоски бургер-меню */
+    .burger span:nth-child(1) {
+        transform: translateY(-10px); /* Перемещение первой полоски вверх на 10px */
+    }
+    
+    /* Стили для третьей полоски бургер-меню */
+    .burger span:nth-child(3) {
+        transform: translateY(10px); /* Перемещение третьей полоски вниз на 10px */
+    }
+    
+    .burger span {
+        position: absolute; /* Абсолютное позиционирование для расположения полосок внутри контейнера */
+        width: 30px; /* Ширина каждой полоски */
+        left: 5px; /* Отступ от левого края контейнера */
+        height: 3px; /* Высота полоски */
+        background-color: black; /* Цвет полоски */
+        bottom: 20px; /* Расположение полоски от нижнего края контейнера */
+    }
+    
+    /* Стили для первой полоски бургер-меню */
+    .burger span:nth-child(1) {
+        transform: translateY(-10px); /* Перемещение первой полоски вверх на 10px */
+    }
+    
+    /* Стили для третьей полоски бургер-меню */
+    .burger span:nth-child(3) {
+        transform: translateY(10px); /* Перемещение третьей полоски вниз на 10px */
+    } /* Стили для списка навигационного меню */
+    .navbar ul {
+        position: absolute; /* Абсолютное позиционирование относительно ближайшего позиционированного предка, в нашем случае экрана. */
+        background-color: #47405a; /* Радужный градиентный фон от верхнего левого угла */
+        flex-direction: column; /* Элементы списка будут выстраиваться вертикально (необходимо для флекс-контейнера) */
+        width: 30%; /* Ширина списка равна 30% от ширины родительского элемента */
+        height: auto; /* Высота автоматически подстраивается под содержимое */
+        top: 68px; /* Расположение списка на 68px ниже от верхнего края родительского элемента */
+        left: -40%; /* Расположение списка на 40% ширины родительского элемента слева (вне видимой области) */
+        z-index: 2; /* Уровень стека элемента, чтобы он перекрывал другие элементы с меньшим z-index */
+    }
+    
+    /* Стили для элементов списка внутри навигационного меню */
+    .navbar ul li {
+        margin-top: 10px; /* Отступ сверху для элементов списка */
+    }
+    
+    /* Стили для элемента списка при наведении */
+    .navbar ul li:hover {
+        background-color: black; /* Цвет фона элемента становится черным при наведении */
+        transform: scale(1.07); /* Увеличение размера элемента на 7% при наведении */
+        transition: 0.4s ease; /* Плавный переход эффекта с продолжительностью 0.4 секунды */
+        border-radius: 5%; /* Закругление углов элемента на 5% */
+    }
+    
+    /* Стили для ссылок в элементах списка при наведении */
+    .navbar ul li a:hover {
+        color: white; /* Цвет текста ссылки становится белым при наведении */
+    } /* Отступ сверху для первого элемента списка в навигационном меню */
+    .navbar ul li:nth-child(1) {
+        margin-top: 20px; /* Увеличение отступа сверху для первого элемента списка */
+    }
+    
+    /* Стили для ссылок внутри элементов списка */
+    .navbar ul li a {
+        margin-left: 0; /* Установка нулевого отступа слева для ссылок */
+        font-size: 1.2rem; /* Установка размера шрифта в 1.2rem */
+    }
+    
+    /* Стили для навигационного меню при открытом состоянии */
+    .navbar.open ul {
+        transform: translateX(100%); /* Перемещение меню на 100% ширины вправо (выдвигается за пределы видимой области) */
+        transition: 0.7s ease-in-out; /* Плавный переход эффекта с продолжительностью 0.7 секунды */
+    }
+    
+    /* Стили для первой полоски бургер-меню при открытом состоянии */
+    .navbar.open .burger span:nth-child(1) {
+        transform: translateY(0) rotate(45deg); /* Поворачивает первую полоску на 45 градусов и возвращает в исходное положение по вертикали */
+    }
+    
+    /* Стили для второй полоски бургер-меню при открытом состоянии */
+    .navbar.open .burger span:nth-child(2) {
+        opacity: 0; /* Делает вторую полоску полностью прозрачной (не видимой) */
+    }
+    
+    /* Стили для третьей полоски бургер-меню при открытом состоянии */
+    .navbar.open .burger span:nth-child(3) {
+        transform: translateY(0) rotate(-45deg); /* Поворачивает третью полоску на -45 градусов и возвращает в исходное положение по вертикали */
+    } 
+    /* скрываем чекбокс */
+    #menu__toggle {
+      opacity: 0;
+    }
+    /* стилизуем кнопку */
+    .menu__btn {
+      display: flex; /* используем flex для центрирования содержимого */
+      align-items: center;  /* центрируем содержимое кнопки */
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #616161;
+    }
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    } 
+    /* контейнер меню */
+    .menu__box {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      list-style: none;
+      text-align: center;
+      background-color: #ECEFF1;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    /* элементы меню */
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .menu__item:hover {
+      background-color: #CFD8DC;
+    }
+
+    
+
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    /* При ширине экрана от 700px до 900px */
+    
+    .container img {
+        margin-top: 20px; /* Отступ сверху для изображений */
+        border-radius: 10%; /* Скругление углов изображений */
+        box-shadow: 5px 5px 5px gray; /* Тень для изображений */
+        width: 320px; /* Ширина изображения фиксирована */
+        height: 200px; /* Высота изображения фиксирована */
+        margin: auto; /* Центрирование изображения по горизонтали */
+    }
+}
