@@ -11,6 +11,10 @@ body {
     text-align:center;
 }
 
+iframe {
+    border: none;
+}
+
 div {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -31,6 +35,7 @@ section {
     с максимальным пространством между ними */
     background-color: #47405a; /* Устанавливает фоновый цвет для .navbar */
 }
+
 
 .logo {
     max-width: 10%;
@@ -395,6 +400,104 @@ footer a {
     
 }
 
+.API span {
+    color: white;
+}
+
+.API {
+    display: flex;
+    flex-direction: column;
+}
+
+.API .city_pict {
+    width: 342px;
+}
+
+.API .Petro {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.API img {
+    width: 100%;
+    height: auto;
+}
+
+.API .Petro img, span {
+    margin: auto;
+    /* width: 50%;
+    height: auto; */
+}
+
+.API .Tokyo {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.API .Tokyo img, span {
+    margin: auto;
+    /* width: 50%;
+    height: auto; */
+}
+
+.API .Tucson {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.API .Tucson img, span {
+    margin: auto;
+    /* width: 50%;
+    height: auto; */
+}
+
+.API .Petro img {
+    border-radius: 8px;
+}
+
+.API .Tucson img {
+    border-radius: 8px;
+}
+
+.API .Tokyo img {
+    border-radius: 8px;
+}
+
+.API .Petro span {
+    display: inline;
+    text-align: center;
+    /* margin: 9%; */
+    font-size: 1.2rem;
+}
+
+.API .Tucson span {
+    display: inline;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.API .Tokyo span {
+    display: inline;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.API .Description_Of_City {
+    flex-direction: column;
+    text-align: center;
+}
 
 @media (max-width: 700px) {
     /* При ширине экрана до 700px */
@@ -651,6 +754,30 @@ footer a {
     }
     .menu__item:hover {
       background-color: #CFD8DC;
+    }
+
+    .API .Tokyo {
+        width: 100%;
+    }
+
+    .API .Petro {
+        width: 100%;
+    }
+
+    .API .Tucson {
+        width: 100%;
+    }
+
+    .API .Petro span {
+        font-size: 1.05rem;
+    }
+
+    .API .Tucson span {
+        font-size: 1.05rem;
+    }
+
+    .API .Tokyo span {
+        font-size: 1.05rem;
     }
 
     
